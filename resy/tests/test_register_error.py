@@ -1,6 +1,6 @@
 import time
 import pytest
-from pages.signup_page import SignupPage
+from pages.register_page import SignupPage
 
 @pytest.mark.usefixtures("setup_teardown")
 class TestErrorRegister:
@@ -10,7 +10,7 @@ class TestErrorRegister:
         signup=SignupPage(driver)
         signup.click_login()
         signup.click_signup()
-        signup.enter_phone("9676875739")
+        signup.enter_phone("8688264205")
         signup.wait_until_captcha_solved()
         signup.click_continue()
         signup.enter_otp_manually()

@@ -1,6 +1,4 @@
 import time
-from random import randint
-
 import pytest
 
 from pages.registration import Signin

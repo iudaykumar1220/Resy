@@ -15,3 +15,6 @@ class Test_login:
         logins.login_password_input("Susmita@0305")
         logins.click_login_continue()
         time.sleep(10)
+
+
+

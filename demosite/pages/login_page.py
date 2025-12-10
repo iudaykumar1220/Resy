@@ -15,8 +15,8 @@ class LoginPage:
         self.log_btn = (By.XPATH, "//input[@value='Login']")
         self.verify=(By.XPATH,"//h2[normalize-space()='My Orders']")
 
-    def open_login_page(self):
-        """Click only on the 'Login' link (My Account handled in another class)."""
+    def click_login(self):
+        """Click only on the 'Login'"""
         login_btn = self.wait.until(EC.element_to_be_clickable(self.log_login))
         login_btn.click()
 
@@ -33,7 +33,6 @@ class LoginPage:
         password_field.send_keys(password)
 
     def click_login_btn(self):
-        """Click on the Login button."""
         button = self.wait.until(EC.element_to_be_clickable(self.log_btn))
         button.click()
 

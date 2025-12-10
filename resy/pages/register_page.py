@@ -58,10 +58,7 @@ class SignupPage:
         otp_field.clear()
         otp_field.send_keys(otp)
 
-    # def click_create_account(self):
-    #     self.wait.until(EC.presence_of_element_located(self.create_account)).click()
 
-    # Corrected method names for clarity
     def enter_first_name(self, name):
         self.driver.find_element(*self.firstname).send_keys(name)
 
@@ -106,20 +103,8 @@ class SignupPage:
             messages.append(e.text)
         return messages
 
-    # def fill_form(self, name="", lastname="", email=""):
-    #     if name:
-    #         self.wait.until(EC.presence_of_element_located(self.firstname)).send_keys(name)
-    #     if lastname:
-    #         self.wait.until(EC.presence_of_element_located(self.lastname)).send_keys(lastname)
-    #     if email:
-    #         self.wait.until(EC.presence_of_element_located(self.email)).send_keys(email)
 
-    # def wait_until_recaptcha_solved(self):
-    #     print("Please solve the reCAPTCHA manually...")
-    #     # Wait up to 2 minutes for user to solve it manually
-    #     WebDriverWait(self.driver, 120).until(
-    #         lambda driver: "recaptcha" not in driver.page_source.lower()
-    #     )
-    #     print("✅ reCAPTCHA solved successfully, continuing...")
+
+
 
 

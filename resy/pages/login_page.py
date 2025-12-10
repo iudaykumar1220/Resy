@@ -17,6 +17,7 @@ class Loginpage:
         self.alerts=(By.XPATH,"//div[@role='alert']")
 
 
+
     def login_email_input(self,email):
         input_email=self.wait.until(EC.presence_of_element_located(self.login_email))
         input_email.send_keys(email)
@@ -37,11 +38,11 @@ class Loginpage:
             return alert_text
         except:
             print("Alert did not appear on the page.")
-            return ""
 
 
-    def get_validation_message(self, field):
-        element = self.wait.until(EC.presence_of_element_located(field))
+
+    def get_validation_message(self):
+        element = self.wait.until(EC.presence_of_element_located(self.login_email))
         message = self.driver.execute_script("return arguments[0].validationMessage;", element)
         print("Validation Message:", message)
         return message

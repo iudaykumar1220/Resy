@@ -1,7 +1,7 @@
 import time
 import pytest
 # from random import randint
-from pages.signup_page import SignupPage
+from pages.register_page import SignupPage
 
 @pytest.mark.usefixtures("setup_teardown")
 class TestRegister:
@@ -13,10 +13,9 @@ class TestRegister:
 
         signup = SignupPage(self.driver)
 
-        # ✅ Fill form
         signup.click_login()
         signup.click_signup()
-        signup.enter_phone("9705247072")
+        signup.enter_phone("8688264205")
         signup.wait_until_captcha_solved()
         signup.click_continue()
         signup.enter_otp_manually()
